@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>flex布局</title>
+  
+    <link rel="stylesheet" href="js/highlight/styles/monokai-sublime.css">
+      <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="flex-layout">
+    <div class="page-nav">
+        <div class="part">
+            <span class="part-title">flexBox的属性</span>
+            <ul class="nav-con">
+                <li class="nav-item" data-type="flex-direction">flex-direction</li>
+                <li class="nav-item" data-type="flex-wrap">flex-wrap</li>
+                <li class="nav-item" data-type="justify-content">justify-content</li>
+                <li class="nav-item" data-type="align-items">align-items</li>
+                <li class="nav-item" data-type="align-content">align-content</li>
+            </ul>
+        </div>
+         <div class="part">
+            <span class="part-title">flexItem的属性</span>
+            <ul class="nav-con">
+                <li class="nav-item" data-type="order">order</li>
+                <li class="nav-item" data-type="flex-grow">flex-grow</li>
+                <li class="nav-item" data-type="flex-shrink">flex-shrink</li>
+                <li class="nav-item" data-type="flex-basis">flex-basis</li>
+                <li class="nav-item" data-type="flex">flex</li>
+                <li class="nav-item" data-type="align-self">align-self</li>
+            </ul>
+        </div>
+    </div>
+    <div class="page-container">
+        <div class="flexBox-property wrap">
+            <h1 class="title">flexBox的属性</h1>
+            <div class="example flex-direction">
+                <h2 class="exp-title">
+            flex-direction
+        </h2>
+                <pre><code class="css">
+    .flex-box {
+        display: flex; 
+        flex-direction: row | column | row-reverse | column-reverse ;
+    }
+
+</code></pre>
+                <div class="exp-content">
+                    <h3 class="value">row</h3>
+                    <div class="flex-box row">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">column</h3>
+                    <div class="flex-box column">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">row-reverse</h3>
+                    <div class="flex-box row-reverse">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">column-reverse</h3>
+                    <div class="flex-box column-reverse">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="example flex-wrap">
+                <h2 class="exp-title">
+            flex-wrap
+        </h2>
+                <pre><code class="css">
+    .flex-box {
+        display: flex; 
+        /* 规定换行，默认值 no-wrap 不换行 */
+        flex-wrap: no-wrap | wrap | wrap-reverse ;
+    }
+
+</code></pre>
+                <div class="exp-content">
+                    <h3 class="value">no-wrap</h3>
+                    <div class="flex-box no-wrap">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                        <div class="flex-item">5</div>
+                        <div class="flex-item">6</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">wrap</h3>
+                    <div class="flex-box wrap">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                        <div class="flex-item">5</div>
+                        <div class="flex-item">6</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">wrap-reverse</h3>
+                    <div class="flex-box wrap-reverse">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                        <div class="flex-item">5</div>
+                        <div class="flex-item">6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="example justify-content">
+                <h2 class="exp-title">
+            justify-content
+        </h2>
+                <pre><code class="css">
+    .flex-box {
+        display: flex; 
+        justify-content: flex-start | flex-end | center | space-between | space-around ;
+    }
+
+</code></pre>
+                <div class="exp-content">
+                    <h3 class="value">flex-start</h3>
+                    <div class="flex-box flex-start">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">flex-end</h3>
+                    <div class="flex-box flex-end">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">center</h3>
+                    <div class="flex-box center">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">space-between</h3>
+                    <div class="flex-box space-between">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">space-around</h3>
+                    <div class="flex-box space-around">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="example align-items">
+                <h2 class="exp-title">
+            align-items
+        </h2>
+                <pre><code class="css">
+    .flex-box {
+        display: flex; 
+        align-items: flex-start | flex-end | center | baseline | stretch ;
+    }
+
+</code></pre>
+                <div class="exp-content">
+                    <h3 class="value">flex-start</h3>
+                    <div class="flex-box flex-start">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                        <div class="flex-item flex-item4">4</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">flex-end</h3>
+                    <div class="flex-box flex-end">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                        <div class="flex-item flex-item4">4</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">center</h3>
+                    <div class="flex-box center">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                        <div class="flex-item flex-item4">4</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">baseline<span>（项目的第一行文字的基线对齐）</span></h3>
+                    <div class="flex-box baseline">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                        <div class="flex-item flex-item4">4</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">stretch<span>（默认值，如果项目未设置高度或设为auto，将占满整个容器的高度。）</span></h3>
+                    <div class="flex-box stretch">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                        <div class="flex-item flex-item4">4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="example align-content">
+                <h2 class="exp-title">
+            align-content
+        </h2>
+                <pre><code class="css">
+    .flex-box {
+        display: flex; 
+        flex-wrap: wrap;
+        /* 该属性仅多行有效 */
+        align-content: flex-start | flex-end | center | space-between | space-around | stretch ;
+    }
+
+</code></pre>
+                <div class="exp-content">
+                    <h3 class="value">flex-start</h3>
+                    <div class="flex-box flex-start">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                        <div class="flex-item">5</div>
+                        <div class="flex-item">6</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">flex-end</h3>
+                    <div class="flex-box flex-end">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                        <div class="flex-item">5</div>
+                        <div class="flex-item">6</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">center</h3>
+                    <div class="flex-box center">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                        <div class="flex-item">5</div>
+                        <div class="flex-item">6</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">space-between</h3>
+                    <div class="flex-box space-between">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                        <div class="flex-item">5</div>
+                        <div class="flex-item">6</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">space-around</h3>
+                    <div class="flex-box space-around">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                        <div class="flex-item">5</div>
+                        <div class="flex-item">6</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">stretch</h3>
+                    <div class="flex-box stretch">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                        <div class="flex-item">5</div>
+                        <div class="flex-item">6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flexItem-property wrap">
+            <h1 class="title">flexItem的属性</h1>
+               <div class="example order">
+                <h2 class="exp-title">
+            order
+        </h2>
+                <pre><code class="css">
+    .flex-item {
+        /* 项目的排列顺序。数值越小，排列越靠前，默认为0 */
+        order: &lt;integer&gt;;
+    }
+
+</code></pre>
+                <div class="exp-content">
+                    <div class="flex-box">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                    </div>
+                </div>          
+            </div>
+                       <div class="example flex-grow">
+                <h2 class="exp-title">
+            flex-grow
+        </h2>
+                <pre><code class="css">
+    .flex-item {
+        /* 项目的放大比例，默认为0，即如果存在剩余空间，也不放大 */
+        flex-grow: &lt;number&gt;;
+    }
+
+</code></pre>
+                <div class="exp-content default">
+                    <div class="flex-box">
+                        <div class="flex-item flex-item1">0</div>
+                        <div class="flex-item flex-item2">0</div>
+                        <div class="flex-item flex-item3">0</div>
+                    </div>
+                </div>
+                <div class="exp-content x1">
+                    <div class="flex-box">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">1</div>
+                        <div class="flex-item flex-item3">1</div>
+                    </div>
+                </div>
+                 <div class="exp-content x2">
+                    <div class="flex-box">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                    </div>
+                </div>             
+            </div>
+             <div class="example flex-shrink">
+                <h2 class="exp-title">
+            flex-shrink
+        </h2>
+                <pre><code class="css">
+    .flex-item {
+        /* item width: 200px */
+        /* 项目的缩小比例，默认为1，即如果空间不足，该项目将缩小 */
+        flex-shrink: &lt;number&gt;;
+    }
+
+</code></pre>
+                <div class="exp-content default">
+                    <div class="flex-box">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">1</div>
+                        <div class="flex-item flex-item3">1</div>
+                    </div>
+                </div>
+                <div class="exp-content x1">
+                    <div class="flex-box">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">0</div>
+                        <div class="flex-item flex-item3">1</div>
+                        <div class="flex-item flex-item4">1</div>
+                        <div class="flex-item flex-item5">1</div>
+                        <div class="flex-item flex-item6">1</div>
+                    </div>
+                </div>
+                </div>
+            <div class="example flex-basis">
+                <h2 class="exp-title">
+            flex-basis
+        </h2>
+                <pre><code class="css">
+    .flex-item {
+        /* item width: 200px */
+        flex-basis: &lt;length&gt; | auto ; /* default auto */
+    }
+
+</code></pre>
+                <div class="exp-content default">
+                    <div class="flex-box">
+                        <div class="flex-item flex-item1">flex-basis: 350px</div>
+                        <div class="flex-item flex-item2">1</div>
+                        <div class="flex-item flex-item3">1</div>
+                    </div>
+                </div>          
+            </div>
+             <div class="example flex">
+                <h2 class="exp-title">
+            flex
+        </h2>
+                <pre><code class="css">
+    .flex-item {
+        /* flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选 */ 
+        flex: none | [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt;? || &lt;'flex-basis'&gt; ] ;
+    }
+
+</code></pre>
+       
+            </div>
+        <div class="example align-self">
+                <h2 class="exp-title">
+            align-self
+        </h2>
+                <pre><code class="css">
+    .flex-item {
+        /* 允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto */
+        align-self: auto | flex-start | flex-end | center | baseline | stretch ;
+    }
+
+</code></pre>
+                      <div class="exp-content">
+                    <h3 class="value">flex-start</h3>
+                    <div class="flex-box flex-start">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                        <div class="flex-item flex-item4">4</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">flex-end</h3>
+                    <div class="flex-box flex-end">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                        <div class="flex-item flex-item4">4</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">center</h3>
+                    <div class="flex-box center">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                        <div class="flex-item flex-item4">4</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">baseline</h3>
+                    <div class="flex-box baseline">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                        <div class="flex-item flex-item4">4</div>
+                    </div>
+                </div>
+                <div class="exp-content">
+                    <h3 class="value">stretch</h3>
+                    <div class="flex-box stretch">
+                        <div class="flex-item flex-item1">1</div>
+                        <div class="flex-item flex-item2">2</div>
+                        <div class="flex-item flex-item3">3</div>
+                        <div class="flex-item flex-item4">4</div>
+                    </div>
+                </div>   
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/highlight/highlight.pack.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
